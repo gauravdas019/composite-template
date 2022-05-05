@@ -1,0 +1,9 @@
+version: "0.1.0"
+
+uses:
+  - https://github.com/3loka/nextjs-aws-s3-stack
+  - https://github.com/3loka/node-azure-stack
+
+name: A stack to create a full stack application
+
+description: A stack to build and deploy a full stack application.

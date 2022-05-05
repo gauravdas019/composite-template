@@ -1,0 +1,4 @@
+version: 0.1.0
+uses:
+  - 3loka/nextjs-aws-s3-stack
+  - 3loka/node-azure-stack

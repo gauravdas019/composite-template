@@ -1,0 +1,80 @@
+version: 0.1.0
+
+import: https://github.com/3loka/nextjs-aws-s3-stack
+import: https://github.com/3loka/node-azure-stack
+
+name: A stack to create a full stack application
+description: A stack to build and deploy a full stack application.
+
+branding:
+  icon: "cloud"
+  color: "red"
+
+# inputs:
+#   - name: AWS_ACCESS_KEY_ID
+#     description: Enter your AWS Key ID. This will be stored as a secret
+#     is-secret: true
+#     required: true
+
+#   - name: AWS_SECRET_ACCESS_KEY
+#     description: Enter your AWS Secret Access key. This will be stored as a secret
+#     is-secret: true
+#     required: true
+
+#   - name: AWS_S3_BUCKET_NAME
+#     description: Enter your AWS S3 BUCKET name. This will be stored as a secret
+#     is-secret: true
+#     required: true
+
+#   - name: AWS_REGION_NAME
+#     description: Enter your AWS Region. This will be stored as a secret
+#     is-secret: true
+#     required: true
+
+#   - name: SERVERLESS_ACCESS_KEY
+#     description: Enter the serverless Access Key. This will be stored as a secret
+#     is-secret: true
+#     required: true
+
+configs:
+  repo-metadata:
+    parameters:
+      description: "Node JS Application on Lambda"
+      # secrets:
+      #   - name: AWS_SECRET_ACCESS_KEY
+      #     value: ${{inputs.AWS_SECRET_ACCESS_KEY}}
+      #   - name: AWS_SECRET_ACCESS_KEY
+      #     value: ${{inputs.AWS_SECRET_ACCESS_KEY}}
+      #   - name: AWS_S3_BUCKET_NAME
+      #     value: ${{inputs.AWS_S3_BUCKET_NAME}}
+      #   - name: AWS_REGION_NAME
+      #     value: ${{inputs.AWS_REGION_NAME}}
+      #   - name: SERVERLESS_ACCESS_KEY
+      #     value: ${{inputs.SERVERLESS_ACCESS_KEY}}
+
+      topics:
+        - nodejs
+        - aws
+        - serverless
+        - lambda
+        - github-app
+        - probot
+
+  branches:
+    - name: main
+      parameters:
+        allow-force-pushes: false
+        allow-deletions: false
+
+init:
+  uses: "stack-init.yml"
+
+
+version: "0.1.0"
+uses:
+  [
+    "https://github.com/3loka/nextjs-aws-s3-stack",
+    "https://github.com/3loka/node-azure-stack",
+  ]
+name: A stack to create a full stack application
+description: A stack to build and deploy a full stack application.
